@@ -21,8 +21,8 @@ splitPhrase.forEach(selected => {
      li.classList.add('hide')   
      li.classList.add('space');   
     } else {
-        li.classList.add('hide');
         li.classList.add('letter');
+        li.classList.add('hide');
     }
 })
     }
@@ -37,10 +37,18 @@ checkLetter(letter) {
 
 //DISPLAYS PASSED LETTER ON SCREEN AFTER A MATCH IS FOUND
 showMatchedLetter(letter) {
-    const letterReveal = document.getElementsByClassName(letter);
+    const letterReveal = document.getElementsByClassName('letter');
+    if (this.checkLetter(letter)){
     for (let i = 0; i < letterReveal.length; i++) {
-        letterReveal[i].classList.remove('hide');
+        if (this.checkLetter(letter)) {
         letterReveal[i].classList.add('show');
+        letterReveal[i].classList.remove('hide');
+        } else {
+            letterReveal[i].classList.add('hide');
+            letterReveal[i].classList.remove('show');
         }
+    }
+}
     }   
-}           
+} 
+ 

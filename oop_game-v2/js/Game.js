@@ -31,7 +31,7 @@ this.activePhrase.addPhraseToDisplay();
         //i want to check if all of the letters from showMatchedLetter are revealed, then the game is over and the player has won
         //1) create a variable that grabs all the hidden letters
         //2) create a conditional statement that if the length of the hidden letters class is 0 return true, if not false
-        let hiddenLetters = document.getElementsByClassName('hide');
+        let hiddenLetters = document.getElementsByClassName('letter hide');
         if (hiddenLetters.length === 0){
             return true;
         } else {
@@ -44,15 +44,15 @@ this.activePhrase.addPhraseToDisplay();
        //replace a liveheart image with a lostheart image
        //increments on the `missed` property
        //if player has 5 missed lives then call gameOver();
-        this.missed++
-        let lives = document.getElementsByClassName('tries');
-        let hearts = lives.firstChild;
-        lives.classList.remove('tries');
-        hearts.src = 'images/lostHeart.png';
-        if (this.missed === 5) {
-        return gameOver(); 
+    this.missed++
+    let lives = document.querySelector(".tries");
+    let heart = lives.firstChild;
+    lives.classList.remove("tries");
+    heart.src = "images/lostHeart.png";
+    if (this.missed === 5) {
+      this.gameOver();
     }
-   }
+  }
 
    //**DISPLAYS GAME OVER AND WIN/LOSS MESSAGES */
    gameOver(gameWon){
