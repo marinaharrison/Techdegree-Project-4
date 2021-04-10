@@ -28,11 +28,11 @@ splitPhrase.forEach(selected => {
     }
 //CHECKS IF PASSED LETTER IS IN THE ACTIVE PHRASE    
 checkLetter(letter) {
-    if (this.phrase.inlcudes(letter)) {
-        return true;
-    } else {
-        return false;
-    }
+    if (this.phrase.includes(letter)) {
+        return true; 
+} else {
+    return false;
+}
 }
 
 //DISPLAYS PASSED LETTER ON SCREEN AFTER A MATCH IS FOUND
@@ -42,5 +42,5 @@ showMatchedLetter(letter) {
         letterReveal[i].classList.remove('hide');
         letterReveal[i].classList.add('show');
         }
-    }          
-}
+    }   
+}           
