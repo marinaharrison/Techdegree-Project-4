@@ -24,6 +24,23 @@ splitPhrase.forEach(selected => {
         li.classList.add('hide');
         li.classList.add('letter');
     }
-});
-    }    
+})
+    }
+//CHECKS IF PASSED LETTER IS IN THE ACTIVE PHRASE    
+checkLetter(letter) {
+    if (this.phrase.inlcudes(letter)) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//DISPLAYS PASSED LETTER ON SCREEN AFTER A MATCH IS FOUND
+showMatchedLetter(letter) {
+    const letterReveal = document.getElementsByClassName(letter);
+    for (let i = 0; i < letterReveal.length; i++) {
+        letterReveal[i].classList.remove('hide');
+        letterReveal[i].classList.add('show');
+        }
+    }          
 }
