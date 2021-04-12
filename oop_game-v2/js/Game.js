@@ -97,5 +97,12 @@ this.activePhrase.addPhraseToDisplay();
              }
         }
     }
+resetGame() {
+    //remove all the 'li' elements from the ul
+    //enable the keyboard buttons
+    //update the buttons to use the 'key' class not the 'wrong' or 'chosen' class
+    //reset the heart images
 
+    
+}
 }
