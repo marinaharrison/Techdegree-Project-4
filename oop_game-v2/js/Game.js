@@ -77,7 +77,7 @@ this.activePhrase.addPhraseToDisplay();
    }
    //STEP 11: BUILD OUT THE HANDLE INTERACTION CLASS
    handleInteraction(button) {
-        //diable the keyboard button
+        //diable the button
         //add 'wrong' CSS class to the selected letter and call the removeLife method
         //if it does include the guessed letter, add the 'chosen' CSS class to the keyboard button and 
         //call the checkForWin() method
@@ -85,6 +85,7 @@ this.activePhrase.addPhraseToDisplay();
     button.disabled = true;
         
     let clickedLetter = this.activePhrase.checkLetter(button.textContent)
+    
     if(!clickedLetter) {
         button.classList.add('wrong');
     return this.removeLife();
