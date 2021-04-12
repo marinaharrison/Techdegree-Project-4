@@ -75,4 +75,13 @@ this.activePhrase.addPhraseToDisplay();
        }
 
    }
+   //STEP 11: BUILD OUT THE HANDLE INTERACTION CLASS
+   handleInteraction() {
+        //diable the keyboard button
+        //add 'wrong' CSS class to the selected letter and call the removeLife method
+        //if it does include the guessed letter, add the 'chosen' CSS class to the keyboard button and 
+        //call the checkForWin() method
+        //if the player wins, call the gameOver() method
+        
+   }
 }
