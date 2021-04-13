@@ -3,23 +3,25 @@
  * app.js */
 //Author: Marina Harrison
 
-const button = document.getElementById('btn__reset');
+//**STEP 8: EVENT LISTENER FOR START GAME**
 
-let game; 
+    const button = document.getElementById('btn__reset');
 
-button.addEventListener('click', e => {
-    game = new Game();
-    game.startGame();
+    let game; 
+
+    button.addEventListener('click', e => {
+        game = new Game();
+        game.startGame();
 });
 
-/**STEP 10:  */
+/**STEP 10: HANDLES ON SCREEN KEYBOARD CLICKS**/
 //create a variable to select all the "key" elements on the keyboard.
 //loop through the length of the the keyboard, adding a click event listener for each key
 //add the handleInteraction() method as a call back in the event listener
-const keyboard = document.getElementsByClassName('key');
+    const keyboard = document.getElementsByClassName('key');
 
-for (let i = 0; i < keyboard.length; i++) {
-keyboard[i].addEventListener('click', e => {
-    game.handleInteraction(e.target);
-     });
-    }
+    for (let i = 0; i < keyboard.length; i++) {
+        keyboard[i].addEventListener('click', e => {
+        game.handleInteraction(e.target);
+});
+}
