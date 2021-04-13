@@ -35,7 +35,7 @@ class Game {
         //i want to check if all of the letters from showMatchedLetter are revealed, then the game is over and the player has won
         //1) create a variable that grabs all the hidden letters
         //2) create a conditional statement that if the length of the hidden letters class is 0 return true, if not false
-        let hiddenLetters = document.getElementsByClassName('hide');
+        const hiddenLetters = document.getElementsByClassName('hide');
         if (hiddenLetters.length === 0){
             return true;
         } else {
@@ -49,7 +49,7 @@ class Game {
        //increments on the `missed` property
        //if player has 5 missed lives then call gameOver();
         this.missed++
-        let lives = document.querySelector(".tries");
+        const lives = document.querySelector(".tries");
         let heart = lives.firstChild;
         lives.classList.remove("tries");
         heart.src = "images/lostHeart.png";

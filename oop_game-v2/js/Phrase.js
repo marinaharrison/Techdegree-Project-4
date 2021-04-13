@@ -9,7 +9,7 @@ class Phrase{
     }
 //**STEP 6: ADD PHRASE TO DISPLAY**/    
     addPhraseToDisplay() {
-        let ul = document.getElementById('phrase').firstElementChild;
+        const ul = document.getElementById('phrase').firstElementChild;
 
 //loop through each letter of the phrase
         for (let i = 0; i < this.phrase.length; i++) {
