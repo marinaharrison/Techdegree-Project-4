@@ -121,8 +121,7 @@ class Game {
               if (heartGame[i].classList != 'tries') {
                 heartGame[i].classList.add('tries');
                 heartGame[i].firstChild.src = 'images/liveHeart.png';
-              }
-            
+              } 
         }
     }
 }
